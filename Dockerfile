@@ -13,6 +13,7 @@ RUN apt-get update -qq \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && truncate -s 0 /var/log/*log
   
-ENV LANG en_US.utf8
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 RUN gem install minitest-reporters nokogiri
